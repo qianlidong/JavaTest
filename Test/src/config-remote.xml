@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="
+	 http://code.alibabatech.com/schema/dubbo
+     http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byName">
+	
+
+	
+	<!-- hessian后台业务接口-->
+	<bean name="/hessian" class="org.springframework.remoting.caucho.HessianServiceExporter">
+		<property name="service" ref="hessianService"/>
+		<property name="serviceInterface" value="com.qian.hessian.HessianService"/>
+	</bean>
+	
+
+	 
+	  <!-- HandlerMapping   --> 
+    <bean  
+        class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />  
+ 
+ <!-- 原来是这个BeanNameUrlHandlerMapping起的作用，来看看怎么回事 
+    
+    <bean id="httpRequestHandlerAdapter" class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter"></bean>
+	-->
+</beans>

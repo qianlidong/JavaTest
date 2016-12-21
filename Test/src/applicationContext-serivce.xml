@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xmlns:util="http://www.springframework.org/schema/util"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	                       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+	                        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd"
+	default-autowire="byName">
+	<description>all business bean</description>
+<bean name="myProjectAdminHandler"  parent="baseTxService"  autowire="byName">
+	<property name="target">
+			<bean class="com.qian.service.MyProjectAdminHandlerImpl" />
+		</property>
+	</bean>
+	
+       <bean name="myProjectAdminController"  class="com.qian.controller.MyProjectAdminController" 
+      autowire="byName">
+	<property name="myProjectAdminHandler">
+      		<ref bean="myProjectAdminHandler"/>
+    	</property>
+	</bean>	
+	
+	<bean id="myProjectUserHandler" class="com.qian.service.MyProjectUserHandlerImpl" >
+          <property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles-defs.xml</value>
+				<value>qian</value>
+			</list>
+		</property>
+		<!-- <property name="dateUtil" ref="personService"></property> -->
+	</bean>
+	
+	<bean id="personService" class="com.qian.service.PersonServiceBean"></bean>
+	<!-- 加签字段配置 -->
+	<bean id="qianMap" class = "java.util.HashMap">
+		<constructor-arg>
+			<map>
+				<entry key="8888_2.1"  value="8888"></entry>
+				<entry key="2002" value="9999"></entry>
+				<entry key="2003" value="5555"></entry>
+		
+			</map>
+		</constructor-arg>
+	</bean>	
+	<!-- 
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:mongodb.properties</value>
+			</list>
+		</property>
+	</bean>
+	 -->
+	<util:properties id="mongodbProperties" location="classpath:mongodb.properties"/>
+
+	
+	<!-- 缓存部分的配置 -->
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:ehcache.xml"/>
+    </bean>
+	
+	<bean id="springCacheManager"	class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+	<!-- <property name="shared" value="1"></property>  -->
+	</bean>
+	<bean id="userCacheManager" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager" ref="springCacheManager" />
+		<property name="cacheName" value="qianCacheConfig"/>
+	</bean>	
+	
+</beans>

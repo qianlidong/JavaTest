@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap 
+	PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" 
+	"http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Project">
+	<typeAlias alias="user" type="com.qian.model.MyUser"/>
+	
+<!-- 	<select id="getUser" parameterClass="java.util.Map" resultClass="com.qian.model.MyUser">
+	
+	select t.id,t.myname,t.sex from qian_test t where t.sex=#sex#
+	
+	</select> -->
+	
+		<select id="getCorp" parameterClass="java.util.Map" resultClass="com.qian.model.CorpInfo">
+	
+	select t.cust_id,t.corp_name,t.corp_type  from cust_corp_info t where t.cust_id=#custId#
+	
+	</select>
+	
+	<insert id="insertUser"
+		parameterClass="java.util.Map">
+		insert into qian_test
+			(ID,
+			MYNAME,
+			SEX) 
+		values 
+			(#id#,
+			#name#,
+			#sex#)
+			
+	</insert>
+	
+	
+		<insert id="saveUser"
+		parameterClass="java.util.Map">
+		insert into person
+			(
+			NAME,
+			SEX) 
+		values 
+			(
+			#name#,
+			#sex#)
+	</insert>
+</sqlMap>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/apache-tomcat-7.0.6/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-web-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-context-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-core-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-beans-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-asm-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-aop-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-aspects-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-context-support-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-data-commons-1.5.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-data-mongodb-1.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-data-mongodb-cross-store-1.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-data-mongodb-log4j-1.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-data-redis-1.0.0.BUILD-SNAPSHOT-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-data-redis-1.0.0.BUILD-SNAPSHOT-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-data-redis-1.0.0.BUILD-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-data-redis-1.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-data-redis-1.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-data-redis-1.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-expression-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-instrument-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-instrument-tomcat-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-jdbc-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-jms-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-orm-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-oxm-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-test-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-tx-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-webmvc-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-webmvc-portlet-3.2.0.M1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/epmzj4/web/WEB-INF/lib/aspectjrt-1.5.4.jar"/>
+	<classpathentry kind="lib" path="/epmzj4/web/WEB-INF/lib/aspectjtools-1.5.4.jar"/>
+	<classpathentry kind="lib" path="/epmzj4/web/WEB-INF/lib/aspectjweaver-1.5.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-dbcp-1.2.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-pool-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Workspace/cps/target/cps/WEB-INF/lib/hessian-3.1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Workspace/cps/target/cps/WEB-INF/lib/mongo-java-driver-2.10.1.jar" sourcepath="D:/Repositories/Maven/org/mongodb/mongo-java-driver/2.10.1/mongo-java-driver-2.10.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Workspace/cps/target/cps/WEB-INF/lib/spring-remoting-2.0.8.jar"/>
+	<classpathentry kind="lib" path="D:/mysql-connector-java-5.1.18-bin.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ehcache-1.2.3.jar" sourcepath="D:/Repositories/Maven/net/sf/ehcache/ehcache/1.2.3/ehcache-1.2.3-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/curator-framework-2.7.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/curator-client-2.7.0.jar" sourcepath="D:/Repositories/Maven/org/apache/curator/curator-client/2.7.0/curator-client-2.7.0-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-io-1.3.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/zookeeper-3.4.6.jar" sourcepath="D:/Repositories/Maven/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/curator-recipes-2.7.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/quartz-1.8.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qld/Desktop/动态口令卡/Java API(含WebService接口)/Java API 1.2.4 for DCAuthSystem 2.x/认证平台接口/动联口令认证短连接接口/dc_api_java_1.2.jar"/>
+	<classpathentry kind="lib" path="/GomeBg/WebContent/WEB-INF/lib/dubbo/dubbo-2.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/qld/Desktop/activemq学习/apache-activemq-5.14.1/activemq-all-5.14.1.jar"/>
+	<classpathentry kind="lib" path="D:/Repositories/Maven/org/jboss/netty/netty/3.2.10.Final/netty-3.2.10.Final.jar" sourcepath="D:/Repositories/Maven/org/jboss/netty/netty/3.2.10.Final/netty-3.2.10.Final-sources.jar"/>
+	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
+</classpath>

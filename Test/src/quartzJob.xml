@@ -1,0 +1,55 @@
+<!-- This file is used to configure framework related spring beans. 
+	This file defines spring beans in 2 ways:
+	1. define generic services (such as dao, service, manager and etc)
+		by importing their respective xml files;
+	2. define generic framework properties and quartz related common beans.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:util="http://www.springframework.org/schema/util" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+	    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd   
+    	http://www.springframework.org/schema/context    
+    	http://www.springframework.org/schema/context/spring-context-3.1.xsd
+    	http://www.springframework.org/schema/tx
+    	http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+    	http://www.springframework.org/schema/util
+    	http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+	<!-- 第一个定时任务 -->	
+	<bean id="oneDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+  		<property name="targetObject" ref="oneJob" />
+  		<property name="targetMethod" value="doJob" />
+	</bean>
+	
+	<bean id="oneJob" class="com.qian.quartzJob.OneJob" >
+	</bean>
+ 
+ 	<bean id="oneTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="oneDetail" />
+		<property name="cronExpression">
+		    <value>0 21 10 * * ? *</value>
+		</property>
+	</bean>
+	
+	<!-- 第二个 -->
+		<bean id="twoDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+  		<property name="targetObject" ref="twoJob" />
+  		<property name="targetMethod" value="doJob" />
+	</bean>
+	
+	<bean id="twoJob" class="com.qian.quartzJob.TwoJob" >
+	</bean>
+ 
+	<bean id="twoTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="twoDetail" />
+		<property name="cronExpression">
+		    <value>0 22 10 * * ? *</value>
+		</property>
+	</bean> 
+	
+	
+
+</beans>
