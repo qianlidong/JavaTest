@@ -7,5 +7,8 @@ public interface BaseService {
 
 	//我来修改下 qld 20161221 121212
 	<T> T getById(Class<T> clazz, Object id);
+	
+	
+	<E> E someOne();
 
 }
