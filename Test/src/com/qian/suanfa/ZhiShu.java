@@ -1,5 +1,10 @@
 package com.qian.suanfa;
 
+/**
+ * 算法测试输出奇数，很简单吧
+ * @author qld
+ *
+ */
 public class ZhiShu {
 
     
