@@ -49,7 +49,7 @@ public class TestCache {
 	           System.err.println("读的是缓中的");
 	        }
 		System.out.println("看看大小吧:"+userList.size());
-		
+		//输出是有环境才行的
 		
 	}
 
